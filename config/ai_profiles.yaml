@@ -1,0 +1,35 @@
+# Named AI generation profiles surfaced in the GUI dropdown.
+profiles:
+  parchment_classic:
+    backend: onnx
+    model_path: models/fantasy_biome_v2.onnx
+    prompt: "hand-drawn parchment fantasy continent, ink coastlines, aged paper"
+    guidance_scale: 6.0
+    steps: 24
+    palette: sepia
+
+  dark_fantasy:
+    backend: onnx
+    model_path: models/fantasy_biome_v2.onnx
+    prompt: "grim dark fantasy map, storm coasts, volcanic interior, muted ink"
+    guidance_scale: 8.5
+    steps: 32
+    palette: ash
+
+  whimsical_storybook:
+    backend: onnx
+    model_path: models/fantasy_biome_v2.onnx
+    prompt: "whimsical storybook map, soft watercolor, gentle hills, bright rivers"
+    guidance_scale: 5.0
+    steps: 20
+    palette: pastel
+
+  topo_survey:
+    backend: procedural_only
+    model_path: null
+    prompt: null
+    guidance_scale: 0.0
+    steps: 0
+    palette: topo_green
+
+default_profile: parchment_classic
