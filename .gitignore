@@ -1,0 +1,44 @@
+# fantasy-map-forge — build, cache, and generated cartography artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# generated maps & caches (regenerable from seeds)
+out/
+exports/
+*.fmgcache
+*.tilecache
+*.png
+*.tiff
+*.svg
+!docs/diagrams/*.svg
+
+# model + dataset blobs (pulled via scripts/fetch_models.py)
+models/*.onnx
+models/*.pt
+models/*.gguf
+datasets/raw/
+datasets/processed/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# local config overrides
+config/local.yaml
+config/secrets.env
