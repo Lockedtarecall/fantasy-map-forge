@@ -1,0 +1,36 @@
+# fantasy-map-forge default settings
+project:
+  autosave_seconds: 120
+  recent_limit: 12
+
+terrain:
+  width: 2048
+  height: 2048
+  seed: 0            # 0 => random per new map
+  octaves: 7
+  lacunarity: 2.0
+  persistence: 0.5
+  sea_level: 0.42
+  erosion_iterations: 45000
+
+hydrology:
+  river_min_length: 24
+  lake_min_area: 180
+  flow_threshold: 0.012
+
+biome:
+  scheme: whittaker
+  temperature_lapse: 6.5   # deg C per km
+  moisture_blur: 3
+
+ai:
+  backend: onnx
+  model_path: models/fantasy_biome_v2.onnx
+  tile_size: 512
+  guidance_scale: 7.5
+  steps: 28
+
+export:
+  default_format: png
+  vector: true
+  dpi: 300
